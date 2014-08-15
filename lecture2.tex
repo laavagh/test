@@ -1,0 +1,233 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  This Beamer template was created by Cameron Bracken.
+%%  Anyone can freely use or modify it for any purpose
+%%  without attribution.
+%%
+%%  Last Modified: January 9, 2009
+%%
+
+%\documentclass[xcolor=x11names,compress]{beamer}
+\documentclass[xcolor=x11names]{beamer}
+
+%% General document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+\usepackage{listings}
+\lstset{
+language=R,
+basicstyle=\scriptsize\ttfamily,
+commentstyle=\ttfamily\color{gray},
+%numbers=left,
+numberstyle=\ttfamily\color{gray}\footnotesize,
+stepnumber=1,
+numbersep=5pt,
+backgroundcolor=\color{white},
+showspaces=false,
+showstringspaces=false,
+showtabs=false,
+frame=single,
+tabsize=2,
+captionpos=b,
+breaklines=true,
+breakatwhitespace=false,
+%title=\lstname,
+escapeinside={},
+keywordstyle=\color{blue},
+morekeywords={}
+}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{decorations.fractals}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% Beamer Layout %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\useoutertheme[subsection=false,shadow]{miniframes}
+\useinnertheme{default}
+\usefonttheme{serif}
+\usepackage{palatino}
+
+\setbeamerfont{title like}{shape=\scshape}
+\setbeamerfont{frametitle}{shape=\scshape}
+
+\setbeamercolor*{lower separation line head}{bg=DeepSkyBlue4} 
+\setbeamercolor*{normal text}{fg=black,bg=white} 
+\setbeamercolor*{alerted text}{fg=red} 
+\setbeamercolor*{example text}{fg=black} 
+\setbeamercolor*{structure}{fg=black} 
+ 
+\setbeamercolor*{palette tertiary}{fg=black,bg=black!10} 
+\setbeamercolor*{palette quaternary}{fg=black,bg=black!10} 
+
+\renewcommand{\(}{\begin{columns}}
+\renewcommand{\)}{\end{columns}}
+\newcommand{\<}[1]{\begin{column}{#1}}
+\renewcommand{\>}{\end{column}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{\scshape Introduction}
+\begin{frame}
+\title{STAT 8510 Lecture 2}
+%\subtitle{SUBTITLE}
+\author{
+Vectors
+}
+\date{ 
+
+	August 21, 2013
+}
+\titlepage
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{frame}{Introduction}
+%\tableofcontents
+%\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{\scshape Background}
+%\subsection{GWAS}
+\begin{frame}{Important Concepts}
+	\begin{itemize}
+		\item Recycling
+		\item Filtering
+		\item Vectorization
+	\end{itemize}
+
+
+\end{frame}
+
+
+\begin{frame}{Adding elements}
+	\lstinputlisting[linerange={1-3}]{analysis.R}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{NGS}
+\begin{frame}{Obtaining vector length}
+	\lstinputlisting[linerange={5-18}]{analysis.R}
+\end{frame}
+
+\begin{frame}{Matrix as vectors}
+	\lstinputlisting[linerange={20-21}]{analysis.R}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{frame 3}
+\begin{frame}[fragile]{Declarations}
+	\lstinputlisting[linerange={23-31}]{analysis.R}
+\end{frame}
+
+
+\begin{frame}{Recycling}
+	
+	\lstinputlisting[linerange={33-37}]{analysis.R}
+\end{frame}
+
+\begin{frame}[fragile]{Vector operations}
+	\lstinputlisting[linerange={39-47}]{analysis.R}
+\end{frame}
+
+\begin{frame}{Vector indexing}
+	\lstinputlisting[linerange={49-57}]{analysis.R}
+\end{frame}
+\begin{frame}{Vector indexing}
+	\lstinputlisting[linerange={59-65}]{analysis.R}
+\end{frame}
+
+\begin{frame}{Generating vectors with :}
+	\lstinputlisting[linerange={67-71}]{analysis.R}
+\end{frame}
+
+\begin{frame}{Generating vectors with seq()}
+	\lstinputlisting[linerange={73-83}]{analysis.R}
+\end{frame}
+
+\begin{frame}{rep()}
+	\lstinputlisting[linerange={85-89}]{analysis.R}
+\end{frame}
+
+\begin{frame}{all() and any()}
+\lstinputlisting[linerange={91-95}]{analysis.R}
+\end{frame}
+
+\begin{frame}{Example}
+	\lstinputlisting[linerange={97-109}]{analysis.R}
+\end{frame}
+
+\begin{frame}{Example}
+	\lstinputlisting[linerange={111-125}]{analysis.R}
+\end{frame}
+
+\begin{frame}{Example: weather prediction}
+	\lstinputlisting[linerange={127-136}]{analysis.R}
+\end{frame}
+
+\begin{frame}{Example: weather prediction}
+	\lstinputlisting[linerange={138-151}]{analysis.R}
+\end{frame}
+
+\begin{frame}{Vetorized operations}
+	\lstinputlisting[linerange={153-164}]{analysis.R}
+\end{frame}
+
+\begin{frame}{Example}
+	\lstinputlisting[linerange={166-174}]{analysis.R}
+\end{frame}
+
+\begin{frame}{NA and NULL}
+	\lstinputlisting[linerange={176-181}]{analysis.R}
+\end{frame}
+
+\begin{frame}{NA and NULL}
+	\lstinputlisting[linerange={183-194}]{analysis.R}
+\end{frame}
+
+\begin{frame}{Filtering}
+	\lstinputlisting[linerange={196-203}]{analysis.R}
+\end{frame}
+
+\begin{frame}{Filtering with subset()}
+	\lstinputlisting[linerange={205-208}]{analysis.R}
+\end{frame}
+
+\begin{frame}{Selection function which()}
+	\lstinputlisting[linerange={210-220}]{analysis.R}
+\end{frame}
+
+\begin{frame}{Vectorized if-then-else}
+	\lstinputlisting[linerange={222-228}]{analysis.R}
+\end{frame}
+
+\begin{frame}{Example: measure association}
+	\lstinputlisting[linerange={230-242}]{analysis.R}
+\end{frame}
+
+\begin{frame}{Testing vector equality}
+	\lstinputlisting[linerange={244-253}]{analysis.R}
+\end{frame}
+
+\begin{frame}{Vector element names}
+	\lstinputlisting[linerange={255-260}]{analysis.R}
+\end{frame}
+
+
+
+
+
+
+
+
+\end{document}
