@@ -17,7 +17,7 @@ x
 length(x)
 1:length(x)
 
-m # matrix
+m <- matrix(1:4, ncol=2) # matrix
 m + 10:13
 
 z <- 3 # No declaration needed
